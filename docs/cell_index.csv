@@ -1,0 +1,368 @@
+original_cell,notebook,section,last_run_status,what_it_does
+0,01_data/01_data_inventory.ipynb,1. File inventory,ok,Data inventory set-up: paths and report folder (gw_framework/data_inventory_report)
+1,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed (FileNotFoundError); superseded by A1 cell 6
+2,99_archive/archive_superseded_cells.ipynb,archive,ok,earlier rainfall extraction; superseded by A1 cell 6
+3,01_data/02_station_rainfall_PDFs.ipynb,1. Inspect the PDFs,ok,Look at one sample page (2010.pdf) with pdfplumber
+4,99_archive/archive_superseded_cells.ipynb,archive,AttributeError,failed; superseded by A1 cell 6
+5,99_archive/archive_superseded_cells.ipynb,archive,IndentationError,failed (IndentationError); superseded by A1 cell 6
+6,01_data/02_station_rainfall_PDFs.ipynb,2. Extract daily rainfall,ok,MAIN — extract daily station rainfall for stations matching groundwater block names → Rainfall_Rajasthan/Matched_Block_Rainfall/
+7,01_data/02_station_rainfall_PDFs.ipynb,3. Duplicates and conflicts,ok,Duplicate audit and quality control of the extracted rainfall
+8,01_data/02_station_rainfall_PDFs.ipynb,3. Duplicates and conflicts,ok,MAIN — resolve conflicting station-date values (minimum-conflict rule) → Rainfall_Audit_Minimum_Conflict_Rule/
+9,01_data/03_groundwater_levels_cleaning_QC.ipynb,1. Load the district Excel files,ok,Status check of the Rajasthan groundwater folder
+10,01_data/03_groundwater_levels_cleaning_QC.ipynb,"2. Cleaning rules, elevations and heads",ok,"MAIN — clean water-level readings by your rules (numeric / dry / no reading, flags) → Groundwater_Cleaning_According_to_User_Rules/"
+11,01_data/03_groundwater_levels_cleaning_QC.ipynb,"2. Cleaning rules, elevations and heads",ok,Well elevation and estimated head audit
+12,01_data/03_groundwater_levels_cleaning_QC.ipynb,"2. Cleaning rules, elevations and heads",ok,Reconcile cleaned outputs with elevation/head outputs
+13,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,1. Scan BDR reports and readiness audit,ok,"Scan the BDR PDFs (Alwar ×5, Bharatpur ×1) for lithology / borehole / pumping-test keywords"
+14,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,1. Scan BDR reports and readiness audit,ok,Alwar data-readiness audit (GEC 2024-25 workbook + BDR evidence)
+15,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,1. Scan BDR reports and readiness audit,ok,Step 2 — BDR borehole and lithology inventory
+16,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,1. Scan BDR reports and readiness audit,ok,Preview the inventory CSVs
+17,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,1. Scan BDR reports and readiness audit,ok,Step 3 — context-based extraction from BDR pages
+18,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,1. Scan BDR reports and readiness audit,ok,Show the extracted text for a given PDF page
+19,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,2. OCR and visual review,ok,Step 4 — Tesseract OCR of all Alwar BDR PDFs
+20,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,2. OCR and visual review,ok,Step 4 — compare OCR vs text layer; quality control
+21,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,2. OCR and visual review,ok,Step 5 — visual review packet (page images + contact sheets)
+22,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,2. OCR and visual review,ok,Render selected pages at 300 DPI for manual reading
+23,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,3. CGWB hydraulic parameters,KeyboardInterrupt,Hydraulic parameter interpolation from verified CGWB point records (waits for an upload — was interrupted)
+24,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,3. CGWB hydraulic parameters,ok,CGWB Alwar report retrieval + pumping-test extraction
+25,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,3. CGWB hydraulic parameters,ok,CGWB download retry — SSL diagnostics
+26,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,3. CGWB hydraulic parameters,ok,Download CGWB PDFs with curl and validate
+27,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,3. CGWB hydraulic parameters,ok,DNS-over-HTTPS check for cgwb.gov.in
+28,03_hydrogeology/01_BDR_PDF_screening_and_CGWB.ipynb,3. CGWB hydraulic parameters,ok,Download + extract hydraulic data (failed: SSL certificate error — download the PDF in a browser instead)
+29,99_archive/archive_superseded_cells.ipynb,archive,RuntimeError,MODFLOW install failed; replaced by A6 install cell
+30,04_model/01_modflow_first_pass_synthetic.ipynb,1. Install MODFLOW 6,ok,Install MODFLOW 6 in Colab
+31,04_model/01_modflow_first_pass_synthetic.ipynb,2. First-pass model,ok,"First-pass MODFLOW 6 model (20 × 20 synthetic grid, 1 layer, 12 periods)"
+32,99_archive/archive_superseded_cells.ipynb,archive,ok,exact duplicate of original cell 33
+33,04_model/01_modflow_first_pass_synthetic.ipynb,3. Calibration preparation,ok,Calibration preparation (found 0 numeric water levels — column detection failed)
+34,04_model/01_modflow_first_pass_synthetic.ipynb,4. Save to Drive,ok,Copy the model ZIP from /content to Drive gw_framework/outputs
+35,99_archive/archive_superseded_cells.ipynb,archive,ok,exact duplicate of original cell 27
+36,01_data/02_station_rainfall_PDFs.ipynb,3. Duplicates and conflicts,ok,Check columns of matched_daily_rainfall.csv
+37,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed; file was found by a later cell
+38,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+39,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,Load gwl/diagnostics/manual_observations_audit.csv
+40,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,"DTW quality audit (distribution, negative DTW by well) → gwl/diagnostics"
+41,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,Per-well summary of parsed observations (gwl/processed/_parsed)
+42,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+43,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,List the INDRA-CMIP6 folder
+44,99_archive/archive_superseded_cells.ipynb,archive,ok,exact duplicate of original cell 43
+45,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,INDRA-CMIP6 file types and climate-relevant files
+46,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Open INDRA-CMIP6 NetCDF files; dimensions
+47,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,INDRA-CMIP6 values over a Rajasthan box
+48,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Check INDRA-CMIP6 historical / SSP245 files for ACCESS-CM2
+49,99_archive/archive_superseded_cells.ipynb,archive,NameError,failed (NameError) INDRA test
+50,01_data/01_data_inventory.ipynb,2. Quick look at groundwater and CMIP6 tables,ok,List groundwater-related CSVs under data/
+51,01_data/03_groundwater_levels_cleaning_QC.ipynb,1. Load the district Excel files,ok,List files in Rajasthan_gw_data
+52,01_data/03_groundwater_levels_cleaning_QC.ipynb,1. Load the district Excel files,ok,Open every district Excel file and list worksheets
+53,99_archive/archive_superseded_cells.ipynb,archive,NameError,failed (NameError)
+54,01_data/03_groundwater_levels_cleaning_QC.ipynb,1. Load the district Excel files,ok,Load and combine all district Excel files into gw
+55,01_data/03_groundwater_levels_cleaning_QC.ipynb,3. Coordinate checks,ok,Check well coordinates against the Rajasthan boundary
+56,01_data/03_groundwater_levels_cleaning_QC.ipynb,3. Coordinate checks,ok,Suggest coordinates for suspect wells by geocoding place names (review only)
+57,01_data/03_groundwater_levels_cleaning_QC.ipynb,3. Coordinate checks,ok,Distance check of suggested coordinates; add blank columns for manual decisions
+58,01_data/03_groundwater_levels_cleaning_QC.ipynb,1. Load the district Excel files,ok,"Reload district files, fill district from filename"
+59,01_data/03_groundwater_levels_cleaning_QC.ipynb,1. Load the district Excel files,ok,Value review of water levels by season → groundwater_value_review.csv
+60,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed; replaced by A1 inspection cells
+61,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+62,01_data/02_station_rainfall_PDFs.ipynb,1. Inspect the PDFs,ok,List the Rajasthan rainfall PDFs (2010–2025)
+63,01_data/02_station_rainfall_PDFs.ipynb,1. Inspect the PDFs,ok,"Inspect PDF pages: text layer, rainfall keywords, sample tables"
+64,99_archive/archive_superseded_cells.ipynb,archive,ok,DTW check placed in the rainfall flow (used the wrong `df`)
+65,01_data/01_data_inventory.ipynb,1. File inventory,ok,Inventory every supported file under gw_framework/data
+66,01_data/01_data_inventory.ipynb,1. File inventory,ok,"NetCDF metadata (variables, time span, bounds)"
+67,01_data/01_data_inventory.ipynb,1. File inventory,ok,Table files (CSV/Excel/parquet): columns and likely date fields
+68,01_data/01_data_inventory.ipynb,1. File inventory,ok,Rasters (GeoTIFF) metadata
+69,01_data/01_data_inventory.ipynb,1. File inventory,ok,Vector/shapefile + scenario-name scan; write text summary and zip the reports
+70,01_data/01_data_inventory.ipynb,2. Quick look at groundwater and CMIP6 tables,ok,Inspect groundwater parquet/CSV and main CMIP6 CSV products
+71,01_data/01_data_inventory.ipynb,2. Quick look at groundwater and CMIP6 tables,ok,"Row counts, well coordinates and CMIP6 date columns"
+72,01_data/01_data_inventory.ipynb,2. Quick look at groundwater and CMIP6 tables,ok,Groundwater observation quality issues + CMIP6 checks
+73,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,Study-area and well-metadata verification (read-only)
+74,99_archive/archive_superseded_cells.ipynb,archive,ValueError,failed (ValueError)
+75,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,"Groundwater source recovery audit: find non-empty sources, diagnose empty processed files"
+76,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed (FileNotFoundError)
+77,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+78,99_archive/archive_superseded_cells.ipynb,archive,ok,folder listing probe
+79,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,Check the expected gwl files exist
+80,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+81,99_archive/archive_superseded_cells.ipynb,archive,SyntaxError,"pasted output text, not code"
+82,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,Search likely source folders → 12_likely_groundwater_source_files.csv
+83,01_data/03_groundwater_levels_cleaning_QC.ipynb,4. Parsed observations in `gwl/` (earlier WRIS/CGWB route),ok,Summarise the recovered source file by well
+84,99_archive/archive_superseded_cells.ipynb,archive,no-output,empty probe
+85,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,MAIN — Alwar source recovery and geographic screening
+86,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Open candidate source workbooks and list sheets
+87,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+88,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Read each sheet/table (tries encodings) and show the first rows
+89,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive check probe
+90,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount only
+91,99_archive/archive_superseded_cells.ipynb,archive,MergeError,failed (MergeError); fixed in Step 2 cells
+92,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 2 — normalise merge keys and keep original row numbers
+93,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,"Step 2 — repeated keys: number occurrences, save with provenance"
+94,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 2 — compare duplicate groups across all columns
+95,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 3 — paths and observation-level diagnostics
+96,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 3A/3B — missing-head reasons; district summary
+97,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 3B — Alwar status categories vs numeric DTW
+98,99_archive/archive_superseded_cells.ipynb,archive,KeyError,failed (KeyError); redone in Step 4 cell
+99,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 4 — Alwar well identifiers and status labels
+100,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 5 — year/season coverage of Alwar records
+101,01_data/03_groundwater_levels_cleaning_QC.ipynb,5. Alwar source recovery — Steps 2 to 6,ok,Step 6 — duplicate numeric observations within well/year/season; well-level summary
+102,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 7 — candidate series and Mann–Kendall / Sen trends
+103,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Install pymannkendall
+104,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 7 — check the trend output files
+105,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount only
+106,99_archive/archive_superseded_cells.ipynb,archive,ok,patch snippet; Step 8 cell is self-contained
+107,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 8 — trend validation with FDR correction
+108,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 9 — serial-dependence-aware robustness (TFPW)
+109,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 10 — export unmatched keys; check coverage and p-values
+110,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 10 — restrict Step 9 results to the 186 Step 7 candidates
+111,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 10B — recompute TFPW on the 186 candidates
+112,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 11 — compare Step 8 (MK/FDR) and Step 10B (TFPW/FDR) significance
+113,99_archive/archive_superseded_cells.ipynb,archive,KeyError,failed (KeyError)
+114,01_data/04_study_domain_and_gw_trends.ipynb,1. Trend tests on all Alwar candidate series (Steps 7–12),ok,Step 12 — join slopes and significance into one table
+115,01_data/04_study_domain_and_gw_trends.ipynb,2. Well coordinates (Step 13),KeyError,"Step 13 — recreate well identifier, parse coordinates (stops with KeyError after creating alwar, which the next cell uses)"
+116,01_data/04_study_domain_and_gw_trends.ipynb,2. Well coordinates (Step 13),ok,Step 13 — coordinate consistency per well (uses alwar)
+117,01_data/04_study_domain_and_gw_trends.ipynb,2. Well coordinates (Step 13),ok,Step 13 — save the coordinate inventory
+118,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Locate the block boundary file
+119,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Read block polygons; CRS and feature count
+120,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),KeyError,Step 14 — wells vs Alwar block polygons (stops with KeyError after creating the variables the next cell uses)
+121,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14 — point-in-polygon test (column-collision fix)
+122,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14 — wells outside the selected polygons
+123,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14 — inspect GEC workbook sheets for block names
+124,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14 — match block names between GEC and polygons
+125,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14 — accepted historical study-area block names
+126,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14D — rebuild the domain from accepted blocks
+127,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,Step 14D/E — the 28 wells outside the reconstructed union
+128,01_data/04_study_domain_and_gw_trends.ipynb,3. The 14-block study domain (Step 14),ok,"MAIN Step 14F — final 14-block domain: 473 wells in, 29 out → Step_14F_Spatial_Analysis_Restriction/"
+129,99_archive/archive_superseded_cells.ipynb,archive,ValueError,failed (ValueError); redone in Step 15A load cell
+130,99_archive/archive_superseded_cells.ipynb,archive,ValueError,failed (ValueError)
+131,99_archive/archive_superseded_cells.ipynb,archive,ok,in-memory schema fix for failed cell 129
+132,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,Step 15A — load files and standardise column names
+133,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,Step 15A — spatial restriction audit
+134,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,Step 15B part 1 — observation schema and numeric-record diagnosis
+135,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,"MAIN Step 15B part 2 — DTW trends for the 14-block domain (90 wells, 180 series, 129 tested)"
+136,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,Step 15C — TFPW sensitivity
+137,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,Step 15D — robust-trend classification (MK vs TFPW)
+138,01_data/04_study_domain_and_gw_trends.ipynb,4. Trends inside the domain (Step 15),ok,Step 15D — lag-1 and slope audit
+139,01_data/04_study_domain_and_gw_trends.ipynb,"5. Maps, block summaries, clustering (Steps 16–18)",ok,Step 16 — maps of DTW trends
+140,01_data/04_study_domain_and_gw_trends.ipynb,"5. Maps, block summaries, clustering (Steps 16–18)",ok,Step 17 — block-level trend assessment
+141,01_data/04_study_domain_and_gw_trends.ipynb,"5. Maps, block summaries, clustering (Steps 16–18)",ok,Step 18A — spatial clustering (Moran's I) and bootstrap uncertainty
+142,01_data/04_study_domain_and_gw_trends.ipynb,"5. Maps, block summaries, clustering (Steps 16–18)",ok,"Step 18B — local Moran's I clusters/outliers (k = 4, 6, 8)"
+143,01_data/04_study_domain_and_gw_trends.ipynb,"5. Maps, block summaries, clustering (Steps 16–18)",ok,Step 18C — cluster stability and spatial-weight audit
+144,01_data/04_study_domain_and_gw_trends.ipynb,"5. Maps, block summaries, clustering (Steps 16–18)",ok,Step 18D — publication maps of local clusters
+145,01_data/01_data_inventory.ipynb,2. Quick look at groundwater and CMIP6 tables,ok,Search data/ for climate and groundwater tables and print their columns
+146,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19A — climate–groundwater compatibility audit
+147,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19B — headers and date sequences of climate CSVs
+148,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19C — representative historical/SSP245 precipitation files
+149,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19C — NetCDF metadata and rainfall coverage
+150,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19D — climate grid cells in an Alwar search window
+151,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19E — source/scenario/variable metadata review table
+152,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 19F — find climate-projection files
+153,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Install download packages
+154,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,1. Other CMIP6 sources explored (not used downstream),ok,Step 20A — NASA NEX-GDDP-CMIP6 subsets for Alwar (explored)
+155,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,2. Download and extract the Mishra CMIP6 archive,KeyboardInterrupt,MAIN — download Mishra et al. CMIP6 India.tar.xz from Zenodo (was interrupted; archive is on Drive)
+156,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,2. Download and extract the Mishra CMIP6 archive,ok,List archive members without extracting
+157,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,2. Download and extract the Mishra CMIP6 archive,ok,Group archive members by variable
+158,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,2. Download and extract the Mishra CMIP6 archive,ok,Fresh listing + extension counts
+159,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+160,99_archive/archive_superseded_cells.ipynb,archive,KeyboardInterrupt,interrupted tar listing; replaced by subprocess extraction
+161,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,2. Download and extract the Mishra CMIP6 archive,ok,MAIN — extract the archive to Vimal_Mishra_CMIP6/SSP245_extracted/India
+162,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount only
+163,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,2. Download and extract the Mishra CMIP6 archive,ok,Confirm extracted models (13)
+164,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Read longitude/latitude header rows of each model file
+165,99_archive/archive_superseded_cells.ipynb,archive,ValueError,failed (ValueError)
+166,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Select Alwar block polygons (LGD 574–587)
+167,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Extract the grid columns covering Alwar
+168,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Verify model × variable files and sizes
+169,99_archive/archive_superseded_cells.ipynb,archive,ok,folder check probe
+170,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Date-column audit of extracted files
+171,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Leap-day audit
+172,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Check the output folder
+173,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Insert missing 29 Feb rows (interpolate only those)
+174,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Spatial validation step 1 — grid cells vs 14 blocks
+175,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed (FileNotFoundError)
+176,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+177,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,"placeholder path, failed"
+178,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive check probe
+179,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Unique grid-cell centres
+180,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Coordinate inventory; deduplicate cell locations
+181,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,MAIN — 22 intersecting cells and block–cell area weights
+182,99_archive/archive_superseded_cells.ipynb,archive,ValueError,failed (ValueError)
+183,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Raw lines of a source file (delimiter check)
+184,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Raw lines and file size
+185,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Parse first rows with whitespace separator
+186,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Check selected grid indices
+187,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,3. Grid cells and block weights,ok,Candidate grid cells near Alwar; grid spacing
+188,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed (FileNotFoundError)
+189,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,4. Block-weighted daily forcing,ok,Check inputs/outputs for block-weighted extraction
+190,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,4. Block-weighted daily forcing,ok,Block-weighted daily values — test run
+191,99_archive/archive_superseded_cells.ipynb,archive,ok,exact duplicate of original cell 190
+192,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,4. Block-weighted daily forcing,ok,Date-field validation
+193,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,4. Block-weighted daily forcing,ok,Block-weighted test using weights and metadata rows
+194,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,4. Block-weighted daily forcing,ok,MAIN — block-weighted daily forcing for 14 blocks × 13 GCMs × 3 variables
+195,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,4. Block-weighted daily forcing,ok,Resume/repair the extraction (keeps finished files)
+196,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Mount Drive and install flopy etc.
+197,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Library version check
+198,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,List block daily forcing files
+199,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Columns of the daily files
+200,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,"Daily QC (missing, duplicates, negative rain, Tmax < Tmin)"
+201,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Daily QC (second version)
+202,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount only
+203,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Daily QC (final version): 39/39 files pass structure checks; Tmax < Tmin flagged
+204,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Tmax < Tmin diagnostics per model/block
+205,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Trace specific Tmax < Tmin dates in source files
+206,99_archive/archive_superseded_cells.ipynb,archive,ok,file search probe
+207,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Compare the three processing stages for one file
+208,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Stage-by-stage comparison for affected models
+209,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Weights table columns; affected block–grid mappings
+210,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Unique block names / LGD codes in the weights file
+211,99_archive/archive_superseded_cells.ipynb,archive,KeyError,failed (KeyError)
+212,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Diagnose grid-column mapping (weights vs extracted columns)
+213,99_archive/archive_superseded_cells.ipynb,archive,EmptyDataError,failed (EmptyDataError)
+214,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Safe audit of all extracted climate files
+215,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,5. Quality control and Tmax < Tmin diagnosis,ok,Inspect original source files for the 22 required cells
+216,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed; superseded by original cell 217
+217,02_climate/01_cmip6_extraction_v1_SUPERSEDED.ipynb,6. Rebuild from source (unfinished; superseded),ok,"Rebuild of the 39 cell files from the original files — stopped after the first file, and it reads the offset columns (3 + index); superseded by 03_climate_forcing_corrected"
+218,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,1. Rebuild block forcing from the `REBUILT` cell files,no-output,Reconstruct block-daily forcing for the 14 blocks from the 39 REBUILT cell files
+219,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,2. Grid-cell and source-level audits,no-output,Grid-cell Tmax/Tmin consistency audit (13 models × 22 cells)
+220,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,2. Grid-cell and source-level audits,no-output,Source-level investigation of Tmax < Tmin violations (SSP2-4.5)
+221,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive search probe
+222,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive search probe
+223,99_archive/archive_superseded_cells.ipynb,archive,no-output,folder inspection probe
+224,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,2. Grid-cell and source-level audits,no-output,Original-source temperature violation investigation
+225,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,2. Grid-cell and source-level audits,no-output,Full source-level temperature quality audit (five models with violations)
+226,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,2. Grid-cell and source-level audits,no-output,"Complete source-level temperature QC audit, all 13 models"
+227,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Map the frequency of Tmax < Tmin reversals by grid cell
+228,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Temporal and magnitude QC of the reversals
+229,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,"Reversal event clustering QC (CanESM5, INM-CM4-8, INM-CM5-0)"
+230,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Identical temperature-pair test (needs events and OUTPUT_DIR from the cell above)
+231,99_archive/archive_superseded_cells.ipynb,archive,no-output,folder check
+232,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Find and load the reversal event inventory; model-level summary
+233,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Set paths to the event inventory
+234,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Temperature-pair uniqueness (needs the cell above)
+235,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive search probe
+236,99_archive/archive_superseded_cells.ipynb,archive,no-output,folder listing
+237,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive search probe
+238,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Load the non-sentinel reversal events
+239,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,3. Where and when the reversals occur,no-output,Temperature-pair uniqueness on the loaded events (needs the cell above)
+240,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,4. Cross-model synchronisation,no-output,Cross-model synchronisation of reversal dates
+241,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,4. Cross-model synchronisation,no-output,Shared reversal dates: detailed event records
+242,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,4. Cross-model synchronisation,no-output,Check the rebuilt grid files for the shared dates
+243,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,5. Checks against the original source; sentinel values,no-output,Source-to-extraction verification for the two shared dates
+244,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,5. Checks against the original source; sentinel values,no-output,Full event inventory vs rebuilt grid extraction audit
+245,99_archive/archive_superseded_cells.ipynb,archive,no-output,superseded by the corrected-file-structure version (orig 247)
+246,99_archive/archive_superseded_cells.ipynb,archive,no-output,folder listing
+247,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,5. Checks against the original source; sentinel values,no-output,"Original-source validation of all 2,804 reversal events (corrected file structure)"
+248,02_climate/02_cmip6_temperature_QC_v1_SUPERSEDED.ipynb,5. Checks against the original source; sentinel values,no-output,"Sentinel value audit: −273.15 °C in the original source, all 13 models"
+249,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive remount and folder check
+250,04_model/02_transient_obs_preparation.ipynb,1. Environment,no-output,Install FloPy and GIS packages; print versions
+251,99_archive/archive_superseded_cells.ipynb,archive,no-output,file listing (needs `BASE_DIR` from orig 249)
+252,04_model/02_transient_obs_preparation.ipynb,1. Environment,no-output,Step 1 — restore the MODFLOW 6 + FloPy environment
+253,04_model/02_transient_obs_preparation.ipynb,2. Observation preparation,no-output,MAIN Step 1 — groundwater observation preparation for the transient model → MODFLOW_Alwar/
+254,04_model/02_transient_obs_preparation.ipynb,2. Observation preparation,no-output,MAIN Step 2A — well spatial database from the Step 1 outputs
+255,03_hydrogeology/02_BDR_lithology_database.ipynb,1. Inventory of the BDR folders and the extracted database,no-output,"Inventory of Alwar_BDR_Lithology_Inventory (folders, file types, CSV and PDF summaries)"
+256,03_hydrogeology/02_BDR_lithology_database.ipynb,1. Inventory of the BDR folders and the extracted database,no-output,"Package the two BDR Word folders (Atal, NHP) as a ZIP with an inventory"
+257,03_hydrogeology/02_BDR_lithology_database.ipynb,1. Inventory of the BDR folders and the extracted database,no-output,Check the main extracted database workbook Alwar_BDR_Extracted_Database.xlsx
+258,03_hydrogeology/02_BDR_lithology_database.ipynb,1. Inventory of the BDR folders and the extracted database,no-output,"Borehole identifiers and QC flags (lithology, coordinates)"
+259,03_hydrogeology/02_BDR_lithology_database.ipynb,1. Inventory of the BDR folders and the extracted database,no-output,Lithology records needing review; NHP coordinate discrepancies
+260,03_hydrogeology/02_BDR_lithology_database.ipynb,1. Inventory of the BDR folders and the extracted database,no-output,Five largest coordinate discrepancies; all 21 lithology records needing review
+261,03_hydrogeology/02_BDR_lithology_database.ipynb,2. NHP coordinates from the Word files; decision register,no-output,Extract DMS coordinates from the 42 NHP Word files (first version)
+262,03_hydrogeology/02_BDR_lithology_database.ipynb,2. NHP coordinates from the Word files; decision register,no-output,Extract DMS coordinates from the NHP Word files (flexible pattern) → 06_NHP_All42_DOCX_DMS_Coordinate_Audit.csv
+263,03_hydrogeology/02_BDR_lithology_database.ipynb,2. NHP coordinates from the Word files; decision register,no-output,NHP coordinate decision register (distance between coordinate sources)
+264,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Summary of flagged lithology intervals by borehole
+265,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Step 4D — extract the original Word tables for the flagged boreholes
+266,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Identify likely lithology/drilling table rows
+267,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,"Show the original tables for two boreholes (ATAL/0522/ALW/RAJ/03, NHP-146)"
+268,99_archive/archive_superseded_cells.ipynb,archive,no-output,Step 4H automatic 1 m boundary correction — replaced by the source-preserving audit (orig 272)
+269,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive mount only
+270,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Check that the key lithology files exist
+271,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Check the output folder (needs BASE from the cell above)
+272,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,MAIN Step 4H — source-preserving lithology audit (no automatic boundary correction)
+273,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Compare interval fields between the audit and the accepted dataset
+274,03_hydrogeology/02_BDR_lithology_database.ipynb,3. Lithology review against the original Word tables (Step 4),no-output,Step 6E — verify accepted lithology intervals against the source audit
+275,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive mount only
+276,03_hydrogeology/02_BDR_lithology_database.ipynb,4. Borehole lithology elevation database (Step 6),no-output,MAIN Step 6F — borehole lithology elevation database
+277,03_hydrogeology/02_BDR_lithology_database.ipynb,4. Borehole lithology elevation database (Step 6),no-output,Compare classified and accepted interval tables
+278,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,1. Hydrostratigraphic groups,no-output,MAIN Hydrostratigraphic intervals and group summary
+279,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,1. Hydrostratigraphic groups,no-output,Revised grouping (normalised lithology text); rebuild summaries
+280,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,1. Hydrostratigraphic groups,no-output,Inspect the elevation database and depth coverage per borehole
+281,99_archive/archive_superseded_cells.ipynb,archive,no-output,exact duplicate of orig 280
+282,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,1. Hydrostratigraphic groups,no-output,Inspect coordinate values for NHP and ATAL boreholes
+283,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7C — borehole correlation register and candidate pairs
+284,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7D — plot the seven closest borehole pairs
+285,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7E — preliminary correlation review (screening only)
+286,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7E-1 — focused review of the seven pairs within 5 km
+287,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7F — source-based validation of candidate correlations
+288,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7F — depth boundary audit
+289,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7G — geological correlation assessment register
+290,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,2. Correlation candidates (Steps 7C–7G),no-output,Step 7G-1 — geological decision register (no automatic acceptance)
+291,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,MAIN Step 7H — preliminary elevation-based sections (four ATAL sections)
+292,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,Step 7H-1 — cross-track distance of boreholes from each section (needs coords from the cell above)
+293,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,Step 7H-1 — section-level interpretation; save (needs the cell above)
+294,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,Step 7H-1 — plot cross-track geometry (needs the cells above)
+295,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,Check the input files and columns for the revised sections
+296,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,MAIN Step 7H-2 — revised five preliminary sections
+297,03_hydrogeology/03_hydrostratigraphy_correlation_sections.ipynb,3. Preliminary sections (Step 7H),no-output,Step 7H-2 fix — source-preserving interval merge (needs the cell above)
+298,99_archive/archive_superseded_cells.ipynb,archive,no-output,Drive mount only
+299,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,1. Reference towns (OpenStreetMap),no-output,Set project and model folders
+300,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,1. Reference towns (OpenStreetMap),no-output,Load the OSM reference-coordinate candidates and the control-point register
+301,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,1. Reference towns (OpenStreetMap),no-output,Geocode town candidates with OpenStreetMap (geopy)
+302,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,1. Reference towns (OpenStreetMap),no-output,Town candidate spatial register and GeoJSON (candidates remain provisional)
+303,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Crop Plate IV with its graticule from the high-resolution map
+304,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Graticule coordinate register
+305,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Draw a 100-pixel grid on the Plate IV crop
+306,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Inspect the approximate neatline bounds
+307,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Summarise the graticule observations
+308,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Cut four measurement strips around the neatline
+309,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Bottom neatline and longitude labels
+310,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Map-frame region with pixel axes
+311,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Left neatline and latitude labels
+312,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,"Detect dark frame lines (OpenCV, first version)"
+313,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Detect frame line segments (robust version) → CSV
+314,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Draw the two candidate frame outlines
+315,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Corner control-point candidates
+316,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Interior graticule register
+317,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Detect candidate tick segments near the frame
+318,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Corrected tick detection (bands just inside the neatline)
+319,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Consolidate tick candidates
+320,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,"2. Map frame, graticule and tick detection",no-output,Match ticks to the printed labels; update the master graticule register
+321,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Inspect PDF page 8 (Plate IV)
+322,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Upgrade PyMuPDF
+323,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Check PyMuPDF
+324,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Extract the embedded original image of Plate IV
+325,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Save the working crop and image metadata
+326,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Convert graticule points to working-crop pixel coordinates
+327,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,3. Embedded original image and working crop,no-output,Check the graticule registers
+328,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,4. Edge geometry and affine fit,no-output,Edge geometry from the ten reviewed interior ticks
+329,03_hydrogeology/04_geology_GSI_plate_georeferencing.ipynb,4. Edge geometry and affine fit,no-output,MAIN Affine fit of the graticule (residuals in metres)
+330,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,1. GSI catalogue,no-output,Search the GSI data.gov.in catalogue for Alwar records
+331,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,1. GSI catalogue,no-output,Show the matching catalogue records
+332,99_archive/archive_superseded_cells.ipynb,archive,FileNotFoundError,failed (FileNotFoundError); image opened in the next cells
+333,99_archive/archive_superseded_cells.ipynb,archive,ok,folder check
+334,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,Open the NATMO district planning map
+335,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,G21F6 — extract the NATMO thematic panels
+336,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,Corrected panel crop windows
+337,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,NATMO thematic evidence register
+338,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,Enlarge the legend windows
+339,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,Show the full irrigation/hydrogeology panel
+340,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,Add legend-verification fields → register v2
+341,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,2. NATMO district planning map,ok,G21F7 — NATMO / GSI / borehole crosswalk
+342,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,3. Borehole lithology inventory and crosswalk,ok,Verify the integrated interval table (Step7ID_Interval_Conceptual_Interpretation.csv)
+343,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,3. Borehole lithology inventory and crosswalk,ok,G21F7 — borehole lithology inventory and class summaries
+344,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,3. Borehole lithology inventory and crosswalk,ok,Literal lithology match audit against the NATMO terms
+345,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,3. Borehole lithology inventory and crosswalk,ok,Evidence-based interpretations → crosswalk v2
+346,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,Inventory of the GSI source files
+347,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,Display GSI Plate IV; save an inspection copy
+348,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,GSI Plate IV legend register
+349,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,G21F8 — Plate IV CRS and map metadata (text search)
+350,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,G21F9 — search Drive for Rajasthan geological GIS layers
+351,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,G21F10 — inspect the existing Alwar spatial reference layers
+352,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,"4. GSI Plate IV legend, CRS and reference layers",ok,G21F11 — DEM and historical boundary spatial validation
+353,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,5. Rajasthan aquifer mapping report maps (in progress),ok,G21F12 — extract the report pages with the two Rajasthan maps (set the PDF path first)
+354,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,5. Rajasthan aquifer mapping report maps (in progress),ok,Search Drive for the report PDF
+355,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,5. Rajasthan aquifer mapping report maps (in progress),ConnectTimeout,Download the Rajasthan aquifer mapping report and locate the map pages
+356,03_hydrogeology/05_geology_NATMO_GSI_crosswalk.ipynb,5. Rajasthan aquifer mapping report maps (in progress),ValueError,G21F13 — extract the original report maps
+357,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount troubleshooting
+358,99_archive/archive_superseded_cells.ipynb,archive,ok,file check
+359,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount troubleshooting
+360,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+361,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive search probe
+362,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive listing
+363,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive listing
+364,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive listing
+365,99_archive/archive_superseded_cells.ipynb,archive,ok,folder check
+366,99_archive/archive_superseded_cells.ipynb,archive,ok,Drive mount troubleshooting

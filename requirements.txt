@@ -1,0 +1,26 @@
+# Colab already has most of these; each notebook's set-up cell installs only what is missing.
+numpy
+pandas
+scipy
+matplotlib
+openpyxl
+pyarrow
+geopandas
+shapely
+pyproj
+rasterio
+xarray
+netCDF4
+requests
+flopy                 # MODFLOW 6 (the executable is downloaded by alwar_gw.colab.install_modflow)
+pymannkendall         # trend tests
+libpysal              # spatial clustering
+esda
+statsmodels
+pdfplumber            # rainfall and BDR PDFs
+pymupdf
+pytesseract           # also needs: apt-get install tesseract-ocr
+python-docx           # BDR Word files
+opencv-python         # map frame / tick detection
+pillow
+geopy                 # OpenStreetMap geocoding
